@@ -1,100 +1,129 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Terms of Use — Stay Well</title>
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background: #f9f9f7;
-      color: #1a1a1a;
-      line-height: 1.7;
-      padding: 40px 20px 80px;
-    }
-    .container { max-width: 720px; margin: 0 auto; }
-    .logo { font-size: 22px; font-weight: 700; color: #2e7d50; margin-bottom: 48px; }
-    h1 { font-size: 32px; font-weight: 700; margin-bottom: 8px; }
-    .updated { color: #777; font-size: 14px; margin-bottom: 48px; }
-    h2 { font-size: 18px; font-weight: 600; margin: 36px 0 12px; }
-    p { margin-bottom: 14px; color: #333; }
-    ul { padding-left: 22px; margin-bottom: 14px; color: #333; }
-    li { margin-bottom: 6px; }
-    a { color: #2e7d50; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    hr { border: none; border-top: 1px solid #e5e5e5; margin: 48px 0; }
-    .footer { color: #999; font-size: 13px; margin-top: 48px; }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Terms of Use · StayWell</title>
+<meta name="description" content="The terms that govern your use of the StayWell app.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --bg:#ECEBE2; --surface:#FFFFFF; --ink:#24261F; --muted:#686B5E; --line:#DBD9CE;
+  --accent:#6C7B52; --accent-ink:#FFFFFF; --soft:#E2E5D5;
+  --display:"Instrument Serif", "Iowan Old Style", Georgia, serif;
+  --body:"Outfit", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  color-scheme:light;
+  padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#1A1D17; --surface:#252820; --ink:#ECEBE2; --muted:#A4A796; --line:#363A2F;
+  --accent:#B8C690; --accent-ink:#1A1D17; --soft:#2C3226; color-scheme:dark }}
+:root[data-theme="dark"]{
+  --bg:#1A1D17; --surface:#252820; --ink:#ECEBE2; --muted:#A4A796; --line:#363A2F;
+  --accent:#B8C690; --accent-ink:#1A1D17; --soft:#2C3226; color-scheme:dark }
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.7}
+a{color:var(--accent)}
+a:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1140px;margin:0 auto;padding-left:max(20px, env(safe-area-inset-left, 0px));padding-right:max(20px, env(safe-area-inset-right, 0px))}
+header{border-bottom:1px solid var(--line)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:14px}
+.brand{display:flex;align-items:center;gap:12px;font-family:var(--display);font-size:1.7rem;text-decoration:none;color:var(--ink)}
+.brand svg{height:46px;width:auto;color:var(--ink)}
+.back{font-weight:600;font-size:.95rem;text-decoration:none;color:var(--muted)}
+.back:hover{color:var(--ink)}
+main .wrap{padding-block:clamp(48px, 7vw, 88px)}
+article{max-width:720px;min-width:0}
+.eyebrow{font-size:.78rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);margin:0 0 14px}
+h1{font-family:var(--display);font-weight:400;font-size:clamp(2.8rem, 6vw, 4.4rem);line-height:1.02;margin:0;text-wrap:balance}
+.updated{color:var(--muted);margin:14px 0 36px}
+h2{font-family:var(--display);font-weight:400;font-size:clamp(1.7rem, 3vw, 2.1rem);line-height:1.15;margin:44px 0 10px;padding-top:24px;border-top:1px solid var(--line)}
+h3{font-family:var(--body);font-weight:600;font-size:1.1rem;margin:28px 0 8px}
+p,ul{margin:0 0 14px}
+ul{padding-left:1.2em}
+li{margin-bottom:8px}
+li::marker{color:var(--accent)}
+strong{font-weight:600}
+.contact{background:var(--soft);border-radius:18px;padding:20px 22px;font-weight:600}
+footer{border-top:1px solid var(--line);padding-block:32px;font-size:.92rem;color:var(--muted)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 20px}
+footer nav{display:flex;flex-wrap:wrap;gap:8px 20px}
+footer a{color:var(--muted);text-decoration:none}
+footer a:hover{color:var(--ink)}
+</style>
+
 </head>
 <body>
-  <div class="container">
-    <div class="logo">Stay Well</div>
+<header><div class="wrap"><a class="brand" href="./"><svg viewBox="26 12 134 186" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="square" aria-hidden="true"><path d="M34 188V76L92 18l58 58v114"/><path d="M60 192V24l58 58v52"/><path d="M60 190h20v-42h24v42h46"/></svg>StayWell</a><a class="back" href="./">← Back to StayWell</a></div></header>
+<main><div class="wrap"><article>
+<p class="eyebrow">StayWell</p>
+<h1>Terms of Use</h1>
+<p class="updated">Last updated: October 23, 2026</p>
+<p>These Terms of Use ("Terms") govern your use of the StayWell app ("App") operated by StayWell ("we," "our," or "us"). By downloading or using the App, you agree to these Terms.</p>
 
-    <h1>Terms of Use</h1>
-    <p class="updated">Last updated: August 14, 2026</p>
+<h2>1. Use of the App</h2>
+<p>StayWell is a personal household management app for meal planning, cookbook management, grocery lists, pantry tracking, deliveries and subscriptions, chore tracking, and household calendar coordination. You may use the App for personal, non-commercial purposes only. You agree not to:</p>
+<ul>
+<li>Reverse-engineer, copy, or redistribute any part of the App.</li>
+<li>Use the App to transmit harmful, unlawful, or abusive content.</li>
+<li>Attempt to bypass usage limits, subscription checks, or security measures.</li>
+<li>Use automated tools to interact with the App's backend.</li>
+</ul>
 
-    <p>These Terms of Use ("Terms") govern your use of the Stay Well app ("App") operated by Stay Well ("we," "our," or "us"). By downloading or using the App, you agree to these Terms.</p>
+<h2>2. Accounts</h2>
+<p>You must create an account to use the App, and you must be at least 18 years old to do so — you confirm this when you sign up. StayWell is designed for parents and guardians to coordinate their household; it is not directed at, and does not knowingly create accounts for, anyone under 18. You are responsible for maintaining the security of your account credentials and for all activity that occurs under your account. Notify us immediately if you suspect unauthorized access.</p>
 
-    <h2>1. Use of the App</h2>
-    <p>Stay Well is a personal household management app for meal planning, cookbook management, chore tracking, and household calendar coordination. You may use the App for personal, non-commercial purposes only. You agree not to:</p>
-    <ul>
-      <li>Reverse-engineer, copy, or redistribute any part of the App.</li>
-      <li>Use the App to transmit harmful, unlawful, or abusive content.</li>
-      <li>Attempt to bypass usage limits, subscription checks, or security measures.</li>
-      <li>Use automated tools to interact with the App's backend.</li>
-    </ul>
+<h2>3. StayWell Pro Subscription</h2>
+<p>StayWell Pro is a paid subscription that unlocks AI meal plan generation and other premium features.</p>
+<ul>
+<li><strong>Free trial:</strong> New subscribers may receive a free trial period. The trial duration is displayed at sign-up. You will be charged the subscription price at the end of the trial unless you cancel before it ends.</li>
+<li><strong>Billing:</strong> Subscriptions are billed through Apple In-App Purchase on a monthly or annual basis. Prices are displayed in the App prior to purchase.</li>
+<li><strong>Auto-renewal:</strong> Subscriptions automatically renew unless cancelled at least 24 hours before the end of the current period.</li>
+<li><strong>Cancellation:</strong> You may cancel at any time through your Apple ID account settings. Cancellation takes effect at the end of the current billing period; no partial refunds are issued.</li>
+<li><strong>Generation limits:</strong> Pro users may generate up to 10 AI meal plans per week. Unused generations do not carry over. Limits reset each Monday.</li>
+</ul>
+<p>All subscription billing and refund disputes are handled by Apple. For refund requests, contact Apple Support.</p>
 
-    <h2>2. Accounts</h2>
-    <p>You must create an account to use the App, and you must be at least 18 years old to do so — you confirm this when you sign up. Stay Well is designed for parents and guardians to coordinate their household; it is not directed at, and does not knowingly create accounts for, anyone under 18. You are responsible for maintaining the security of your account credentials and for all activity that occurs under your account. Notify us immediately if you suspect unauthorized access.</p>
+<h2>4. AI-Generated Content</h2>
+<p>StayWell uses AI (Claude by Anthropic) to power several features, including suggesting meal plans and snacks (StayWell Pro), reading scanned recipes, and filling in details such as ingredients and prices. AI-generated content is for informational and convenience purposes only. We do not guarantee the nutritional accuracy, safety, or suitability of any AI-generated meal or snack suggestion, or the accuracy of details AI fills in, such as ingredients or estimated prices. Always consult a qualified healthcare or nutrition professional for dietary advice, especially for individuals with health conditions or serious food allergies.</p>
 
-    <h2>3. Stay Well Pro Subscription</h2>
-    <p>Stay Well Pro is a paid subscription that unlocks AI meal plan generation and other premium features.</p>
-    <ul>
-      <li><strong>Free trial:</strong> New subscribers may receive a free trial period. The trial duration is displayed at sign-up. You will be charged the subscription price at the end of the trial unless you cancel before it ends.</li>
-      <li><strong>Billing:</strong> Subscriptions are billed through Apple In-App Purchase on a monthly or annual basis. Prices are displayed in the App prior to purchase.</li>
-      <li><strong>Auto-renewal:</strong> Subscriptions automatically renew unless cancelled at least 24 hours before the end of the current period.</li>
-      <li><strong>Cancellation:</strong> You may cancel at any time through your Apple ID account settings. Cancellation takes effect at the end of the current billing period; no partial refunds are issued.</li>
-      <li><strong>Generation limits:</strong> Pro users may generate up to 10 AI meal plans per week. Unused generations do not carry over. Limits reset each Monday.</li>
-    </ul>
-    <p>All subscription billing and refund disputes are handled by Apple. For refund requests, contact Apple Support.</p>
+<h2>5. Intellectual Property</h2>
+<p>All content in the App — including design, text, graphics, and code — is owned by StayWell or its licensors. You retain ownership of the content you enter into the App (meal plans, cookbook entries, etc.).</p>
+<h3>User Recipe Content and Intellectual Property</h3>
+<p>StayWell allows users to save, organize, and share recipes. By uploading, importing, creating, or sharing recipe content through the App, you represent and warrant that:</p>
+<ul>
+<li>You own the content you submit, or you have all necessary rights, licenses, or permissions to use and share it through StayWell.</li>
+<li>Your content does not infringe the intellectual property, copyright, trademark, or other rights of any third party.</li>
+<li>You are solely responsible for any content you upload, import, publish, or share.</li>
+</ul>
+<p>Recipes imported from third-party websites, meal kit services, cookbooks, social media platforms, or other external sources are intended for your personal use within your private StayWell cookbook unless you have permission or other legal authority to share them. StayWell may restrict or prevent the sharing of imported content.</p>
+<p>StayWell reserves the right to remove or disable access to any content that is alleged or reasonably believed to infringe the rights of another person or entity, and may suspend or terminate accounts that repeatedly violate these Terms.</p>
+<p>If you believe content available through StayWell infringes your intellectual property rights, please submit a notice using the process described in our <a href="copyright.html">Copyright Policy</a>. See also our <a href="community-guidelines.html">Recipe Sharing Guidelines</a> for what may be shared with others.</p>
 
-    <h2>4. AI-Generated Content</h2>
-    <p>Stay Well Pro uses AI (Claude by Anthropic) to suggest meal plans. AI suggestions are for informational and convenience purposes only. We do not guarantee the nutritional accuracy, safety, or suitability of any AI-generated meal suggestion. Always consult a qualified healthcare or nutrition professional for dietary advice, especially for individuals with health conditions or serious food allergies.</p>
+<h2>6. Disclaimer of Warranties</h2>
+<p>The App is provided "as is" without warranties of any kind, express or implied. We do not warrant that the App will be uninterrupted, error-free, or that AI-generated content will be accurate or complete.</p>
+<p>Recipes imported by users or shared between users are not reviewed or verified by StayWell. We do not warrant the accuracy of their ingredients, instructions, or nutritional or allergen information. Always verify ingredients yourself before cooking, especially if you or someone you're cooking for has food allergies or other health conditions.</p>
 
-    <h2>5. Intellectual Property</h2>
-    <p>All content in the App — including design, text, graphics, and code — is owned by Stay Well or its licensors. You retain ownership of the content you enter into the App (meal plans, cookbook entries, etc.).</p>
+<h2>7. Limitation of Liability</h2>
+<p>To the maximum extent permitted by law, StayWell shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of the App, including any reliance on AI-generated meal suggestions or on imported or shared recipe content.</p>
 
-    <h3 style="font-size: 16px; font-weight: 600; margin: 20px 0 10px;">User Recipe Content and Intellectual Property</h3>
-    <p>Stay Well allows users to save, organize, and share recipes. By uploading, importing, creating, or sharing recipe content through the App, you represent and warrant that:</p>
-    <ul>
-      <li>You own the content you submit, or you have all necessary rights, licenses, or permissions to use and share it through Stay Well.</li>
-      <li>Your content does not infringe the intellectual property, copyright, trademark, or other rights of any third party.</li>
-      <li>You are solely responsible for any content you upload, import, publish, or share.</li>
-    </ul>
-    <p>Recipes imported from third-party websites, meal kit services, cookbooks, social media platforms, or other external sources are intended for your personal use within your private Stay Well cookbook unless you have permission or other legal authority to share them. Stay Well may restrict or prevent the public sharing of imported content.</p>
-    <p>Stay Well reserves the right to remove or disable access to any content that is alleged or reasonably believed to infringe the rights of another person or entity, and may suspend or terminate accounts that repeatedly violate these Terms.</p>
-    <p>If you believe content available through Stay Well infringes your intellectual property rights, please submit a notice using the process described in our <a href="copyright.html">Copyright Policy</a>. See also our <a href="community-guidelines.html">Community Recipe Guidelines</a> for what may be shared publicly.</p>
+<h2>8. Changes to These Terms</h2>
+<p>We may update these Terms from time to time. We will notify you of material changes through the App or by email. Continued use of the App after changes take effect constitutes acceptance of the updated Terms.</p>
 
-    <h2>6. Disclaimer of Warranties</h2>
-    <p>The App is provided "as is" without warranties of any kind, express or implied. We do not warrant that the App will be uninterrupted, error-free, or that AI-generated content will be accurate or complete.</p>
-    <p>Recipes imported by users or shared between users are not reviewed or verified by Stay Well. We do not warrant the accuracy of their ingredients, instructions, or nutritional or allergen information. Always verify ingredients yourself before cooking, especially if you or someone you're cooking for has food allergies or other health conditions.</p>
+<h2>9. Governing Law</h2>
+<p>These Terms are governed by the laws of the State of Idaho, without regard to conflict of law principles.</p>
 
-    <h2>7. Limitation of Liability</h2>
-    <p>To the maximum extent permitted by law, Stay Well shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of the App, including any reliance on AI-generated meal suggestions or on imported or shared recipe content.</p>
+<h2>10. Contact</h2>
+<p>Questions about these Terms? Contact us at:</p>
+<p class="contact"><a href="mailto:support@staywellsharetheload.com">support@staywellsharetheload.com</a></p>
 
-    <h2>8. Changes to These Terms</h2>
-    <p>We may update these Terms from time to time. We will notify you of material changes through the App or by email. Continued use of the App after changes take effect constitutes acceptance of the updated Terms.</p>
-
-    <h2>9. Governing Law</h2>
-    <p>These Terms are governed by the laws of the State of Idaho, without regard to conflict of law principles.</p>
-
-    <h2>10. Contact</h2>
-    <p>Questions about these Terms? Contact us at:<br />
-    <a href="mailto:codytrautman5@gmail.com">codytrautman5@gmail.com</a></p>
-
-    <hr />
-    <p class="footer">© 2026 Stay Well. All rights reserved. &nbsp;·&nbsp; <a href="privacy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="community-guidelines.html">Community Guidelines</a> &nbsp;·&nbsp; <a href="copyright.html">Copyright Policy</a> &nbsp;·&nbsp; <a href="support.html">Support</a></p>
-  </div>
+</article></div></main>
+<footer><div class="wrap"><span>© 2026 StayWell. All rights reserved.</span><nav>
+<a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Use</a><a href="community-guidelines.html">Recipe Sharing Guidelines</a><a href="copyright.html">Copyright Policy</a><a href="support.html">Support</a>
+</nav></div></footer>
 </body>
 </html>

@@ -1,61 +1,91 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Community Recipe Guidelines — Stay Well</title>
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background: #f9f9f7;
-      color: #1a1a1a;
-      line-height: 1.7;
-      padding: 40px 20px 80px;
-    }
-    .container { max-width: 720px; margin: 0 auto; }
-    .logo { font-size: 22px; font-weight: 700; color: #2e7d50; margin-bottom: 48px; }
-    h1 { font-size: 32px; font-weight: 700; margin-bottom: 8px; }
-    .updated { color: #777; font-size: 14px; margin-bottom: 48px; }
-    h2 { font-size: 18px; font-weight: 600; margin: 36px 0 12px; }
-    p { margin-bottom: 14px; color: #333; }
-    ul { padding-left: 22px; margin-bottom: 14px; color: #333; }
-    li { margin-bottom: 6px; }
-    a { color: #2e7d50; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    hr { border: none; border-top: 1px solid #e5e5e5; margin: 48px 0; }
-    .footer { color: #999; font-size: 13px; margin-top: 48px; }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Recipe Sharing Guidelines · StayWell</title>
+<meta name="description" content="What recipes you can share from your StayWell cookbook.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --bg:#ECEBE2; --surface:#FFFFFF; --ink:#24261F; --muted:#686B5E; --line:#DBD9CE;
+  --accent:#6C7B52; --accent-ink:#FFFFFF; --soft:#E2E5D5;
+  --display:"Instrument Serif", "Iowan Old Style", Georgia, serif;
+  --body:"Outfit", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  color-scheme:light;
+  padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#1A1D17; --surface:#252820; --ink:#ECEBE2; --muted:#A4A796; --line:#363A2F;
+  --accent:#B8C690; --accent-ink:#1A1D17; --soft:#2C3226; color-scheme:dark }}
+:root[data-theme="dark"]{
+  --bg:#1A1D17; --surface:#252820; --ink:#ECEBE2; --muted:#A4A796; --line:#363A2F;
+  --accent:#B8C690; --accent-ink:#1A1D17; --soft:#2C3226; color-scheme:dark }
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.7}
+a{color:var(--accent)}
+a:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1140px;margin:0 auto;padding-left:max(20px, env(safe-area-inset-left, 0px));padding-right:max(20px, env(safe-area-inset-right, 0px))}
+header{border-bottom:1px solid var(--line)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:14px}
+.brand{display:flex;align-items:center;gap:12px;font-family:var(--display);font-size:1.7rem;text-decoration:none;color:var(--ink)}
+.brand svg{height:46px;width:auto;color:var(--ink)}
+.back{font-weight:600;font-size:.95rem;text-decoration:none;color:var(--muted)}
+.back:hover{color:var(--ink)}
+main .wrap{padding-block:clamp(48px, 7vw, 88px)}
+article{max-width:720px;min-width:0}
+.eyebrow{font-size:.78rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);margin:0 0 14px}
+h1{font-family:var(--display);font-weight:400;font-size:clamp(2.8rem, 6vw, 4.4rem);line-height:1.02;margin:0;text-wrap:balance}
+.updated{color:var(--muted);margin:14px 0 36px}
+h2{font-family:var(--display);font-weight:400;font-size:clamp(1.7rem, 3vw, 2.1rem);line-height:1.15;margin:44px 0 10px;padding-top:24px;border-top:1px solid var(--line)}
+h3{font-family:var(--body);font-weight:600;font-size:1.1rem;margin:28px 0 8px}
+p,ul{margin:0 0 14px}
+ul{padding-left:1.2em}
+li{margin-bottom:8px}
+li::marker{color:var(--accent)}
+strong{font-weight:600}
+.contact{background:var(--soft);border-radius:18px;padding:20px 22px;font-weight:600}
+footer{border-top:1px solid var(--line);padding-block:32px;font-size:.92rem;color:var(--muted)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 20px}
+footer nav{display:flex;flex-wrap:wrap;gap:8px 20px}
+footer a{color:var(--muted);text-decoration:none}
+footer a:hover{color:var(--ink)}
+</style>
+
 </head>
 <body>
-  <div class="container">
-    <div class="logo">Stay Well</div>
+<header><div class="wrap"><a class="brand" href="./"><svg viewBox="26 12 134 186" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="square" aria-hidden="true"><path d="M34 188V76L92 18l58 58v114"/><path d="M60 192V24l58 58v52"/><path d="M60 190h20v-42h24v42h46"/></svg>StayWell</a><a class="back" href="./">← Back to StayWell</a></div></header>
+<main><div class="wrap"><article>
+<p class="eyebrow">StayWell</p>
+<h1>Recipe Sharing Guidelines</h1>
+<p class="updated">Last updated: October 23, 2026</p>
+<p>StayWell lets you share recipes from your cookbook with friends and family, by text message or however you like to share. Our goal is for every recipe shared through StayWell to be one people can confidently share and enjoy. These guidelines explain what's okay to share.</p>
 
-    <h1>Community Recipe Guidelines</h1>
-    <p class="updated">Last updated: August 6, 2026</p>
+<h2>What you can share</h2>
+<p>Please only share recipes that:</p>
+<ul>
+<li>You created yourself.</li>
+<li>Are family recipes that you have the right to share.</li>
+<li>You have permission from the owner or publisher to share.</li>
+</ul>
 
-    <p>Our goal is to build a collection of recipes our community can confidently share and enjoy. These guidelines explain what's okay to publish to the StayWell Cookbook, the public, shared recipe collection inside the app.</p>
+<h2>What not to share</h2>
+<p>Please do not share recipes copied from websites, blogs, meal kit services, cookbooks, Pinterest links, magazines, or other sources unless you have permission to share them.</p>
+<p>Recipes imported into your private cookbook from external sources are intended to help you organize your own personal collection. They should not be shared with others through StayWell unless you have the appropriate rights or permission.</p>
 
-    <h2>What you can upload</h2>
-    <p>Please only upload recipes that:</p>
-    <ul>
-      <li>You created yourself.</li>
-      <li>Are family recipes that you have the right to share.</li>
-      <li>You have permission from the owner or publisher to share publicly.</li>
-    </ul>
+<h2>Before you share</h2>
+<p>Whenever you send a recipe to another person, StayWell will ask you to confirm that you created the recipe or have permission to share it. Answering honestly keeps shared recipes trustworthy.</p>
 
-    <h2>What not to upload</h2>
-    <p>Please do not upload recipes copied from websites, blogs, meal kit services, cookbooks, Pinterest links, magazines, or other sources unless you have permission to publish them.</p>
-    <p>Recipes imported into your private cookbook from external sources are intended to help you organize your own personal collection. They should not be shared with others through Stay Well unless you have the appropriate rights or permission.</p>
+<h2>Reporting a concern</h2>
+<p>If you discover content that you believe infringes your rights, or otherwise shouldn't be shared, please <a href="mailto:support@staywellsharetheload.com">contact us</a> so we can review it promptly. See our <a href="copyright.html">Copyright Policy</a> for how to submit a copyright notice.</p>
 
-    <h2>Before you share</h2>
-    <p>Whenever you publish a recipe to the community cookbook, or send one directly to another person, Stay Well will ask you to confirm that you created the recipe or have permission to share it. Answering honestly keeps this a collection people can trust.</p>
-
-    <h2>Reporting a concern</h2>
-    <p>If you discover content that you believe infringes your rights, or otherwise shouldn't be here, please contact us so we can review it promptly. See our <a href="copyright.html">Copyright Policy</a> for how to submit a copyright notice.</p>
-
-    <hr />
-    <p class="footer">© 2026 Stay Well. All rights reserved. &nbsp;·&nbsp; <a href="terms.html">Terms of Use</a> &nbsp;·&nbsp; <a href="privacy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="copyright.html">Copyright Policy</a> &nbsp;·&nbsp; <a href="support.html">Support</a></p>
-  </div>
+</article></div></main>
+<footer><div class="wrap"><span>© 2026 StayWell. All rights reserved.</span><nav>
+<a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Use</a><a href="community-guidelines.html">Recipe Sharing Guidelines</a><a href="copyright.html">Copyright Policy</a><a href="support.html">Support</a>
+</nav></div></footer>
 </body>
 </html>
