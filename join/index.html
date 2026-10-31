@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Join my household on StayWell</title>
+<meta name="description" content="Shared meals, groceries, chores and calendar">
+<meta name="robots" content="noindex">
+<meta name="apple-itunes-app" content="app-id=6784473745">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<!-- One static preview for every invite: the site is plain GitHub Pages, so it can't render a
+     name per code. The text comes from the person inviting, so "my household" reads right. -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="StayWell">
+<meta property="og:title" content="Join my household on StayWell">
+<meta property="og:description" content="Shared meals, groceries, chores and calendar">
+<meta property="og:url" content="https://staywellsharetheload.com/join">
+<meta property="og:image" content="https://staywellsharetheload.com/join-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://staywellsharetheload.com/join-og.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --bg:#ECEBE2; --surface:#FFFFFF; --ink:#24261F; --muted:#686B5E; --line:#DBD9CE;
+  --accent:#6C7B52; --accent-ink:#FFFFFF; --soft:#E2E5D5;
+  --display:"Instrument Serif", "Iowan Old Style", Georgia, serif;
+  --body:"Outfit", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){:root{
+  --bg:#1A1D17; --surface:#252820; --ink:#ECEBE2; --muted:#A4A796; --line:#363A2F;
+  --accent:#B8C690; --accent-ink:#1A1D17; --soft:#2C3226; color-scheme:dark }}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;display:flex;flex-direction:column;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6}
+main{flex:1;display:flex;align-items:center;justify-content:center;padding:48px max(20px, env(safe-area-inset-left, 0px)) 32px}
+.card{width:100%;max-width:440px;text-align:center}
+.mark{height:72px;width:auto;color:var(--accent);margin-bottom:20px}
+h1{font-family:var(--display);font-weight:400;font-size:clamp(2.4rem, 8vw, 3.2rem);line-height:1.05;margin:0 0 12px;text-wrap:balance}
+.sub{color:var(--muted);margin:0 0 28px}
+.code{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:18px 20px;margin:0 0 24px}
+.code span{display:block;font-size:.85rem;color:var(--muted)}
+.code strong{display:block;font-family:ui-monospace, SFMono-Regular, Menlo, monospace;font-size:2.2rem;letter-spacing:.08em;font-weight:600}
+.btn{display:block;width:100%;padding:16px 20px;border-radius:999px;background:var(--accent);color:var(--accent-ink);font-weight:600;font-size:1.05rem;text-decoration:none}
+.btn:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.link{display:inline-block;margin-top:14px;padding:10px;color:var(--accent);font-weight:600;text-decoration:none}
+.steps{color:var(--muted);font-size:.95rem;margin:24px 0 0}
+footer{padding:24px;text-align:center;font-size:.9rem;color:var(--muted)}
+footer a{color:var(--muted)}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+<main>
+<div class="card">
+  <svg class="mark" viewBox="26 12 134 186" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="square" aria-hidden="true"><path d="M34 188V76L92 18l58 58v114"/><path d="M60 192V24l58 58v52"/><path d="M60 190h20v-42h24v42h46"/></svg>
+  <h1 id="title">Join my household on StayWell</h1>
+  <p class="sub" id="sub">Shared meals, groceries, chores and calendar, with everyone at home.</p>
+
+  <div class="code" id="code-box" hidden>
+    <span>Household code</span>
+    <strong id="code"></strong>
+  </div>
+
+  <a class="btn" href="https://apps.apple.com/us/app/staywell-share-the-load/id6784473745">Get StayWell on the App Store</a>
+  <a class="link" id="open" href="staywell://join" hidden>Already have StayWell? Open it</a>
+
+  <p class="steps" id="steps">After installing, create your account and choose <strong>Join a household</strong>, then enter the code.</p>
+</div>
+</main>
+<footer><a href="/">StayWell</a> · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a></footer>
+<script>
+(function () {
+  var raw = new URLSearchParams(location.search).get("code") || "";
+  var code = raw.replace(/[\s-]/g, "").toUpperCase();
+  if (!/^[A-Z0-9]{6}$/.test(code)) {
+    document.getElementById("steps").textContent =
+      "Ask the person who invited you for their household code, then enter it in the app under Join a household.";
+    return;
+  }
+  document.getElementById("code").textContent = code.slice(0, 3) + " " + code.slice(3);
+  document.getElementById("code-box").hidden = false;
+  var open = document.getElementById("open");
+  open.href = "staywell://join?code=" + code;
+  open.hidden = false;
+
+  // The inviter's first name, for people reading the page (the Messages preview stays generic).
+  fetch("https://tiztmfivzskcmxdgwmmm.supabase.co/functions/v1/preview-household-invite", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ code: code })
+  })
+    .then(function (r) { return r.json(); })
+    .then(function (data) {
+      if (!data.valid) {
+        document.getElementById("title").textContent = "This invite has expired";
+        document.getElementById("sub").textContent =
+          "Invite codes work once and last 24 hours. Ask for a new one.";
+        document.getElementById("code-box").hidden = true;
+        open.hidden = true;
+        return;
+      }
+      if (data.firstName) {
+        document.getElementById("title").textContent = "Join " + data.firstName + "’s household on StayWell";
+        document.title = "Join " + data.firstName + "’s household on StayWell";
+      }
+    })
+    .catch(function () {});
+})();
+</script>
+</body>
+</html>

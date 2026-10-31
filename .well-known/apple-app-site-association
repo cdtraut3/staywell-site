@@ -1,0 +1,13 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["BAY6J62YJG.Household-Operating-System.StayWell-For-Real"],
+        "components": [
+          { "/": "/join", "?": { "code": "?*" }, "comment": "Household invite links" },
+          { "/": "/join/", "?": { "code": "?*" }, "comment": "Household invite links" }
+        ]
+      }
+    ]
+  }
+}
