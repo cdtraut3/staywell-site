@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.staywellsharetheload.app",
+      "sha256_cert_fingerprints": [
+        "23:8F:97:9C:C6:10:71:56:69:9E:D8:50:68:36:81:52:A6:FB:20:C4:78:CE:7E:C9:C7:BC:42:27:3C:DE:23:D0"
+      ]
+    }
+  }
+]
