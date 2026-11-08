@@ -62,7 +62,7 @@ footer a:hover{color:var(--ink)}
 <main><div class="wrap"><article>
 <p class="eyebrow">StayWell</p>
 <h1>Privacy Policy</h1>
-<p class="updated">Last updated: November 4, 2026</p>
+<p class="updated">Last updated: November 8, 2026</p>
 <p>StayWell ("we," "our," or "us") is committed to protecting your privacy. This policy explains what information we collect, how we use it, and your choices.</p>
 
 <h2>1. Information We Collect</h2>
@@ -78,7 +78,7 @@ footer a:hover{color:var(--ink)}
 <li><strong>Photos:</strong> If you scan a physical recipe with your camera, we store the photo alongside the recipe it was scanned from so you can refer back to it. If you add a reference photo to a pantry or shopping item (StayWell Pro), we store that photo with the item so your household can see exactly what to buy. Photos are only stored when you choose to add one — we don't access your camera or photo library otherwise.</li>
 <li><strong>Shared recipes:</strong> If you send a recipe from your cookbook to another person, for example by text message or another sharing method, StayWell creates a link to a web page that shows the recipe and the first name you share it under. Anyone you send the link to can view that recipe. A recipe imported from a website is shared as its title, the website's name, its ingredients and a link to the original page. Your notes and your private steps are never included. See our <a href="community-guidelines.html">Recipe Sharing Guidelines</a>.</li>
 <li><strong>Recipe links you import (StayWell Pro):</strong> When you import a recipe from a website, the link is sent to our servers, which read that public page. If the website blocks our servers, your phone reads the page instead and sends us only its recipe information (title, ingredients, steps, servings, and its link and image addresses), never the whole page. We keep the recipe's facts (title, website name, ingredients and servings), the page's link and the address of its preview image in a shared recipe library, so the next person who saves the same recipe doesn't need it read again. That library contains no information about you. We don't copy or store the website's photos, stories or written instructions. Your cookbook entry points to the library entry; your own edits and notes stay with your household. If you have StayWell Pro, the short steps our AI writes for you are stored with your account and visible only to you.</li>
-<li><strong>Opening a shared recipe after installing:</strong> If you tap "Get StayWell" on a shared recipe's web page, the page copies its own link so the app can offer to open that recipe once installed. The app checks only whether your clipboard holds a web link, and reads it only if you tap Paste.</li>
+<li><strong>Opening a shared recipe after installing (iPhone):</strong> If you tap "Get StayWell" on a shared recipe's web page, the page copies its own link so the app can offer to open that recipe once installed. The app checks only whether your clipboard holds a web link, and reads it only if you tap Paste.</li>
 <li><strong>Push notification data:</strong> If you enable notifications, we store a device token and your notification preferences so we can deliver them (e.g. chore reminders, meal plan ready).</li>
 <li><strong>Usage data:</strong> Number of AI meal plan generations used per week (to enforce plan limits), and overall daily usage totals across the app. We do not use third-party analytics or crash-reporting tools.</li>
 <li><strong>Feedback:</strong> Messages you send us from the app's Send Feedback option.</li>
@@ -113,12 +113,13 @@ footer a:hover{color:var(--ink)}
 <ul>
 <li><strong>Supabase:</strong> stores your account and app data, and photos you add.</li>
 <li><strong>Anthropic:</strong> powers AI features, as described in Section 3.</li>
-<li><strong>Apple:</strong> processes in-app purchases, delivers push notifications, and handles requests if you use StayWell with Siri.</li>
+<li><strong>Apple:</strong> on iPhone, processes in-app purchases, delivers push notifications, and handles requests if you use StayWell with Siri.</li>
+<li><strong>Google:</strong> on Android, processes purchases through Google Play and delivers push notifications through Firebase Cloud Messaging. Reading a scanned recipe photo uses Google's on-device text recognition, so the photo itself isn't sent to Google.</li>
 <li><strong>Vercel:</strong> hosts the web page that displays a recipe when you share a recipe link (share.staywellsharetheload.com).</li>
 </ul>
 
 <h2>5. Subscriptions and Payments</h2>
-<p>All payments are processed by Apple through In-App Purchase. We never see or store your payment card information. Subscription management (upgrades, cancellations, refunds) is handled through your Apple ID settings.</p>
+<p>On iPhone, payments are processed by Apple through In-App Purchase, and subscriptions are managed (upgrades, cancellations, refunds) in your Apple ID settings. On Android, payments are processed by Google Play, and subscriptions are managed in the Google Play Store under Payments &amp; subscriptions. We never see or store your payment card information. To confirm a Google Play subscription, we store the purchase token Google gives the app and the subscription's status and renewal date.</p>
 
 <h2>6. Data Retention</h2>
 <p>Your data is retained as long as your account is active. You can delete your account at any time from Settings → Delete Account in the app. This immediately and permanently deletes your account data — including your profile, household, meal plan, cookbook, shopping lists, pantry, deliveries and subscriptions, chores, calendar, scanned recipe photos, photos you added to items, feedback you've sent, and notification settings — from our servers. It cannot be undone. If you're the owner of a household shared with other members, you'll need to remove them (or have them leave) before you can delete your account, since deleting the household would also delete their data.</p>
